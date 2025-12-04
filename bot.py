@@ -3,7 +3,8 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 from aiogram.filters import CommandStart
 
-TOKEN = "8546210786:AAHKpQotNPJvbYpnU7cfqF7PZBh2bD0NcnI"
+import os
+TOKEN = os.getenv("TOKEN")
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
@@ -91,3 +92,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
